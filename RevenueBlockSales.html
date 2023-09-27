@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>  
+        <title>Don't Forget There's A Test!!!</title> 
+        <script>
+            function getCost() {
+            //input
+            var wooden = document.getElementById("woodenIn").value;
+            var plastic = document.getElementById("plasticIn").value;
+            var rubber = document.getElementById("rubberIn").value;
+            //process
+            var woodenCost = wooden * 5;
+            var plasticCost = plastic * 2;
+            var rubberCost = rubber * 4;
+            var totalCost = woodenCost + plasticCost + rubberCost;
+            //output
+            document.getElementById("woodenCost").innerHTML = "The wooden blocks are: $" + woodenCost;
+            document.getElementById("plasticCost").innerHTML = "The plastic blocks are: $" + plasticCost;
+            document.getElementById("rubberCost").innerHTML = "The rubber blocks are: $" + rubberCost;
+            document.getElementById("totalCost").innerHTML = "The total cost is: $" + totalCost;
+            }
+        </script>
+    </head>
+	<body>
+        <h1>josephParrett</h1>
+            
+        <p>Numer of Wooden Blocks <input id="woodenIn" type="number" size="3" min="0" max="100" value="0"></p>
+        <p>Number of Plastic Blocks <input id="plasticIn" type="number" size="3" min="0" max="100" value="0"></p>
+        <p>Number of Rubber Blocks <input id="rubberIn" type="number" size="3" min="0" max="100" value="0"></p>
+
+        <button type="button" onclick="getCost()">Calculate</button>
+        <p id="woodenCost"></p>
+        <p id="plasticCost"></p>
+        <p id="rubberCost"></p>
+        <P id="totalCost"></P>
+        
+	</body>	
